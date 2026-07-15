@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import { getSortedPosts } from '@/lib/posts';
 import { getSortedEvents } from '@/lib/events';
+import { getSortedMeetings } from '@/lib/meetings';
 import PostCard from '@/components/PostCard';
 import EventCard from '@/components/EventCard';
+import MeetingCard from '@/components/MeetingCard';
 
 export default function Home() {
   const posts = getSortedPosts().slice(0, 3);
   const events = getSortedEvents().slice(0, 2);
+  const meetings = getSortedMeetings().slice(0, 2);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
@@ -60,6 +63,20 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {events.map((event) => (
             <EventCard key={event.slug} event={event} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <div className="mb-8 flex items-end justify-between">
+          <h2 className="text-2xl font-bold">Мітинги</h2>
+          <Link href="/meetings" className="text-sm font-medium hover:underline">
+            Всі мітинги →
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {meetings.map((meeting) => (
+            <MeetingCard key={meeting.slug} meeting={meeting} />
           ))}
         </div>
       </section>

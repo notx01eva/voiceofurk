@@ -7,6 +7,7 @@ const links = [
   { href: '/', label: 'Головна' },
   { href: '/posts', label: 'Новини' },
   { href: '/events', label: 'Збори' },
+  { href: '/meetings', label: 'Мітинги' },
   { href: '/map', label: 'Карта' },
   { href: '/join', label: 'Приєднатись' },
 ];
