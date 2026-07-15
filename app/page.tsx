@@ -54,16 +54,24 @@ export default function Home() {
             href="https://www.sternenkofund.org/"
             target="_blank"
             rel="noreferrer"
-            className="block"
+            className="group relative block min-h-[280px] overflow-hidden rounded-2xl border border-white/10 shadow-xl"
           >
-            <div className="relative aspect-[1200/630] w-full overflow-hidden rounded-2xl border border-white/10 bg-black shadow-xl">
-              <Image
-                src="/images/sternenko-banner.png"
-                alt="Благодійний фонд Спільнота Стерненка"
-                fill
-                className="object-contain"
-                priority
-              />
+            <Image
+              src="/images/sternenko-banner.png"
+              alt="Благодійний фонд Спільнота Стерненка"
+              fill
+              className="object-cover transition duration-500 group-hover:scale-105"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50" />
+            <div className="relative flex h-full min-h-[280px] flex-col justify-end p-6 sm:p-8">
+              <h3 className="text-xl font-bold uppercase tracking-wide text-white sm:text-2xl">
+                Фонд Сергія Стерненка
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-200">
+                Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
+                щодня, щомісяця.
+              </p>
             </div>
           </a>
         </div>
