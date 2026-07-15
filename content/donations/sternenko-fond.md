@@ -1,6 +1,6 @@
 ---
 title: "Фонд Сергія Стерненка"
 description: "Перевірений фонд, який підтримує Збройні Сили України та громадські ініціативи."
-link: "https://sternenko.com/"
+link: "https://www.sternenkofund.org/"
 linkLabel: "Задонатити"
 ---

@@ -32,6 +32,14 @@ export default function Home() {
             >
               Всі новини
             </Link>
+            <a
+              href="https://www.sternenkofund.org/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-amber-500 px-6 py-3 font-medium text-zinc-900 transition hover:bg-amber-400"
+            >
+              Підтримати фонд
+            </a>
             <Link
               href="/join"
               className="rounded-full border border-white/30 px-6 py-3 font-medium transition hover:bg-white/10"
