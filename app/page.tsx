@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { getSortedPosts } from '@/lib/posts';
 import { getSortedEvents } from '@/lib/events';
@@ -17,36 +18,54 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="rounded-3xl bg-zinc-900 px-6 py-16 text-white dark:bg-zinc-100 dark:text-zinc-900 sm:px-10">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Голос громади
-          </h1>
-          <p className="mt-6 text-lg text-zinc-300 dark:text-zinc-700">
-            Незалежна платформа для новин, координації зборів та об&apos;єднання людей
-            навколо важливих громадських ініціатив.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/posts"
-              className="rounded-full bg-white px-6 py-3 font-medium text-zinc-900 transition hover:bg-zinc-200"
-            >
-              Всі новини
-            </Link>
-            <a
-              href="https://www.sternenkofund.org/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-amber-500 px-6 py-3 font-medium text-zinc-900 transition hover:bg-amber-400"
-            >
-              Підтримати фонд
-            </a>
-            <Link
-              href="/join"
-              className="rounded-full border border-white/30 px-6 py-3 font-medium transition hover:bg-white/10"
-            >
-              Приєднатись
-            </Link>
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Голос громади
+            </h1>
+            <p className="mt-6 text-lg text-zinc-300 dark:text-zinc-700">
+              Незалежна платформа для новин, координації зборів та об&apos;єднання людей
+              навколо важливих громадських ініціатив.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/posts"
+                className="rounded-full bg-white px-6 py-3 font-medium text-zinc-900 transition hover:bg-zinc-200"
+              >
+                Всі новини
+              </Link>
+              <a
+                href="https://www.sternenkofund.org/"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-amber-500 px-6 py-3 font-medium text-zinc-900 transition hover:bg-amber-400"
+              >
+                Донат на поточний русоріз
+              </a>
+              <Link
+                href="/join"
+                className="rounded-full border border-white/30 px-6 py-3 font-medium transition hover:bg-white/10"
+              >
+                Приєднатись
+              </Link>
+            </div>
           </div>
+          <a
+            href="https://www.sternenkofund.org/"
+            target="_blank"
+            rel="noreferrer"
+            className="block"
+          >
+            <div className="relative aspect-[1200/630] w-full overflow-hidden rounded-2xl border border-white/10 bg-black shadow-xl">
+              <Image
+                src="/images/sternenko-banner.png"
+                alt="Благодійний фонд Спільнота Стерненка"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </a>
         </div>
       </section>
 
