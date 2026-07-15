@@ -17,64 +17,34 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <section className="rounded-3xl bg-zinc-900 px-6 py-16 text-white dark:bg-zinc-100 dark:text-zinc-900 sm:px-10">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Голос громади
-            </h1>
-            <p className="mt-6 text-lg text-zinc-300 dark:text-zinc-700">
-              Незалежна платформа для новин, координації зборів та об&apos;єднання людей
-              навколо важливих громадських ініціатив.
+      <section className="rounded-3xl bg-zinc-900 p-4 text-white dark:bg-zinc-100 dark:text-zinc-900 sm:p-6">
+        <a
+          href="https://www.sternenkofund.org/"
+          target="_blank"
+          rel="noreferrer"
+          className="group relative block min-h-[420px] overflow-hidden rounded-2xl border border-white/10 shadow-xl sm:min-h-[480px]"
+        >
+          <Image
+            src="/images/sternenko-banner.png"
+            alt="Благодійний фонд Спільнота Стерненка"
+            fill
+            className="object-cover object-top transition duration-500 group-hover:scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="relative flex h-full min-h-[420px] flex-col items-center justify-center p-6 text-center sm:min-h-[480px] sm:p-10">
+            <h2 className="text-3xl font-bold uppercase tracking-wide text-white sm:text-5xl">
+              Фонд Сергія Стерненка
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
+              Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
+              щодня, щомісяця.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/posts"
-                className="rounded-full bg-white px-6 py-3 font-medium text-zinc-900 transition hover:bg-zinc-200"
-              >
-                Всі новини
-              </Link>
-              <a
-                href="https://www.sternenkofund.org/"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full bg-amber-500 px-6 py-3 font-medium text-zinc-900 transition hover:bg-amber-400"
-              >
-                Донат на поточний русоріз
-              </a>
-              <Link
-                href="/join"
-                className="rounded-full border border-white/30 px-6 py-3 font-medium transition hover:bg-white/10"
-              >
-                Приєднатись
-              </Link>
-            </div>
+            <span className="mt-8 inline-flex rounded-full bg-amber-500 px-8 py-3.5 text-base font-medium text-zinc-900 transition hover:bg-amber-400 sm:text-lg">
+              Донат на поточний русоріз
+            </span>
           </div>
-          <a
-            href="https://www.sternenkofund.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="group relative block min-h-[280px] overflow-hidden rounded-2xl border border-white/10 shadow-xl"
-          >
-            <Image
-              src="/images/sternenko-banner.png"
-              alt="Благодійний фонд Спільнота Стерненка"
-              fill
-              className="object-cover transition duration-500 group-hover:scale-105"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50" />
-            <div className="relative flex h-full min-h-[280px] flex-col justify-end p-6 sm:p-8">
-              <h3 className="text-xl font-bold uppercase tracking-wide text-white sm:text-2xl">
-                Фонд Сергія Стерненка
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-200">
-                Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
-                щодня, щомісяця.
-              </p>
-            </div>
-          </a>
-        </div>
+        </a>
       </section>
 
       <section className="mt-16">
