@@ -49,6 +49,20 @@ export default function Home() {
 
       <section className="mt-16">
         <div className="mb-8 flex items-end justify-between">
+          <h2 className="text-2xl font-bold">Мітинги</h2>
+          <Link href="/meetings" className="text-sm font-medium hover:underline">
+            Всі мітинги →
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {meetings.map((meeting) => (
+            <MeetingCard key={meeting.slug} meeting={meeting} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <div className="mb-8 flex items-end justify-between">
           <h2 className="text-2xl font-bold">Останні новини</h2>
           <Link href="/posts" className="text-sm font-medium hover:underline">
             Всі новини →
@@ -71,20 +85,6 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {events.map((event) => (
             <EventCard key={event.slug} event={event} />
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-16">
-        <div className="mb-8 flex items-end justify-between">
-          <h2 className="text-2xl font-bold">Мітинги</h2>
-          <Link href="/meetings" className="text-sm font-medium hover:underline">
-            Всі мітинги →
-          </Link>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          {meetings.map((meeting) => (
-            <MeetingCard key={meeting.slug} meeting={meeting} />
           ))}
         </div>
       </section>
