@@ -9,6 +9,7 @@ const links = [
   { href: '/events', label: 'Збори' },
   { href: '/meetings', label: 'Мітинги' },
   { href: '/map', label: 'Карта' },
+  { href: '/donate', label: 'Підтримати' },
   { href: '/join', label: 'Приєднатись' },
 ];
 

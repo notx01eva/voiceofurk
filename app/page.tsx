@@ -2,14 +2,17 @@ import Link from 'next/link';
 import { getSortedPosts } from '@/lib/posts';
 import { getSortedEvents } from '@/lib/events';
 import { getSortedMeetings } from '@/lib/meetings';
+import { getDonations } from '@/lib/donations';
 import PostCard from '@/components/PostCard';
 import EventCard from '@/components/EventCard';
 import MeetingCard from '@/components/MeetingCard';
+import DonationCard from '@/components/DonationCard';
 
 export default function Home() {
   const posts = getSortedPosts().slice(0, 3);
   const events = getSortedEvents().slice(0, 2);
   const meetings = getSortedMeetings().slice(0, 2);
+  const donations = getDonations();
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
@@ -77,6 +80,20 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {meetings.map((meeting) => (
             <MeetingCard key={meeting.slug} meeting={meeting} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16 rounded-2xl bg-zinc-900 px-6 py-10 text-white dark:bg-zinc-100 dark:text-zinc-900 sm:px-10">
+        <div className="mb-8 flex items-end justify-between">
+          <h2 className="text-2xl font-bold">Підтримати</h2>
+          <Link href="/donate" className="text-sm font-medium hover:underline">
+            Всі фонди →
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {donations.map((donation) => (
+            <DonationCard key={donation.slug} donation={donation} />
           ))}
         </div>
       </section>
