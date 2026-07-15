@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Голос громади
 
-## Getting Started
+Сайт громадської ініціативи з новинною стрічкою, розділом зборів/подій, картою локацій та формою для волонтерів.
 
-First, run the development server:
+## Стек
+
+- [Next.js](https://nextjs.org/) 16 + App Router
+- [React](https://react.dev/) 19
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [TypeScript](https://www.typescriptlang.org/)
+- Markdown-файли для контенту (`gray-matter`, `remark`)
+- [Leaflet](https://leafletjs.com/) для карти
+
+## Локальний запуск
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Сайт буде доступний за адресою [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Як публікувати новину
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Створіть файл `content/posts/<slug>.md`.
+2. Додайте frontmatter:
 
-## Learn More
+```yaml
+---
+title: "Заголовок новини"
+date: "2026-07-15"
+excerpt: "Короткий опис, який показується в стрічці"
+image: "https://example.com/image.jpg"
+---
 
-To learn more about Next.js, take a look at the following resources:
+Текст новини у Markdown.
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Зробіть `git commit` + `git push` — сайт оновиться автоматично після деплою.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Як додати збір / подію
 
-## Deploy on Vercel
+1. Створіть файл `content/events/<slug>.md`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```yaml
+---
+title: "Назва збору"
+date: "2026-07-18T11:00:00"
+location: "Адреса або місце"
+description: "Короткий опис"
+coordinates: [50.4504, 30.5245]
+link: "https://t.me/..."
+---
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Події з координатами автоматично з'являться на карті.
+
+## Деплой
+
+### Vercel
+
+1. Завантажте репозиторій на GitHub.
+2. Імпортуйте проєкт на [vercel.com](https://vercel.com/).
+3. Натисніть **Deploy** — все інше налаштується автоматично.
+
+### Netlify
+
+1. Завантажте репозиторій на GitHub.
+2. Імпортуйте на [netlify.com](https://netlify.com/).
+3. Команда збірки: `npm run build`, публічна папка: `out` (якщо включено статичний експорт) або залиште за замовчуванням.
+
+## Налаштування зображень
+
+Щоб використовувати власні фото, покладіть їх у папку `public/images/` і вкажіть шлях `/images/photo.jpg` в frontmatter. Для зовнішніх URL додайте домен у `next.config.ts`.
+
+## Наступні кроки
+
+- Підключити реальну відправку форми (Formspree, Resend, Telegram-бот або власний API Route).
+- Додати OG-зображення та мета-теги для соцмереж.
+- Підключити аналітику (Plausible, Google Analytics).
+- Замінити placeholder-зображення на реальні фото.
