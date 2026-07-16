@@ -25,6 +25,11 @@ body {
   color: var(--foreground);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -40,8 +45,15 @@ html {
 
 .marquee-track {
   animation: marquee 70s linear infinite;
+  will-change: transform;
 }
 
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }

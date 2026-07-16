@@ -35,15 +35,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/70" />
           <div className="relative flex min-h-[420px] flex-col items-center justify-center p-6 text-center sm:min-h-[480px] sm:p-10">
             <div className="w-full max-w-lg px-2 sm:max-w-2xl">
-              <h2 className="text-2xl font-bold uppercase tracking-wide text-white sm:text-5xl">
+              <h2 className="break-words text-2xl font-bold uppercase tracking-normal text-white sm:text-5xl sm:tracking-wide">
                 Фонд Сергія Стерненка
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-zinc-200 sm:text-lg">
+              <p className="mt-4 break-words text-base leading-relaxed text-zinc-200 sm:text-lg">
                 Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
                 щодня, щомісяця.
               </p>
             </div>
-            <span className="mt-8 inline-flex rounded-full bg-amber-500 px-8 py-3.5 text-base font-bold uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 sm:text-lg">
+            <span className="mt-8 inline-flex max-w-full rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 sm:px-8 sm:py-3.5 sm:text-base sm:text-lg">
               Донат на поточний русоріз
             </span>
           </div>

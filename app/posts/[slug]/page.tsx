@@ -47,7 +47,7 @@ export default async function PostPage({
       </header>
 
       <div
-        className="prose prose-zinc mt-8 max-w-none dark:prose-invert"
+        className="prose prose-zinc mt-8 max-w-none overflow-hidden break-words dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </article>

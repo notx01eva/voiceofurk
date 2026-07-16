@@ -18,7 +18,7 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-center px-4 md:justify-between">
         <Link
           href="/"
-          className="text-center text-xl font-bold uppercase tracking-tight md:text-2xl"
+          className="break-words text-center text-xl font-bold uppercase tracking-tight md:text-2xl"
         >
           Голос громади
         </Link>
