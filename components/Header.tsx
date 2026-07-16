@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
 
 const links = [
   { href: '/', label: 'Головна' },
@@ -14,12 +13,13 @@ const links = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="text-xl font-bold tracking-tight">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-center px-4 md:justify-between">
+        <Link
+          href="/"
+          className="text-center text-xl font-bold uppercase tracking-tight md:text-2xl"
+        >
           Голос громади
         </Link>
 
@@ -34,30 +34,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-
-        <button
-          onClick={() => setOpen(!open)}
-          className="rounded-md p-2 text-xl md:hidden"
-          aria-label="Меню"
-        >
-          {open ? '✕' : '☰'}
-        </button>
       </div>
-
-      {open && (
-        <nav className="flex flex-col gap-4 border-t border-zinc-200 px-4 py-4 md:hidden dark:border-zinc-800">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="text-sm font-medium"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }
