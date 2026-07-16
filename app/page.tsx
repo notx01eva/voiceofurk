@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { getSortedPosts } from '@/lib/posts';
 import { getSortedEvents } from '@/lib/events';
@@ -24,13 +23,17 @@ export default function Home() {
           rel="noreferrer"
           className="group relative block min-h-[420px] overflow-hidden shadow-xl sm:min-h-[480px]"
         >
-          <Image
-            src="/images/sternenko-banner.png"
-            alt="Благодійний фонд Спільнота Стерненка"
-            fill
-            className="object-cover object-top transition duration-500 group-hover:scale-105"
-            priority
-          />
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcSet="/images/sternenko-banner-mobile.jpeg"
+            />
+            <img
+              src="/images/sternenko-banner-desktop.jpeg"
+              alt="Благодійний фонд Спільнота Стерненка"
+              className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+            />
+          </picture>
           <div className="absolute inset-0 bg-black/70" />
           <div className="relative flex h-full min-h-[420px] flex-col items-center justify-center p-6 text-center sm:min-h-[480px] sm:p-10">
             <h2 className="text-3xl font-bold uppercase tracking-wide text-white sm:text-5xl">
