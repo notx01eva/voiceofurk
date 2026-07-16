@@ -22,7 +22,7 @@ export default function Home() {
           href="https://www.sternenkofund.org/"
           target="_blank"
           rel="noreferrer"
-          className="group relative block min-h-[420px] overflow-hidden rounded-2xl border border-white/10 shadow-xl sm:min-h-[480px]"
+          className="group relative block min-h-[420px] overflow-hidden rounded-2xl shadow-xl sm:min-h-[480px]"
         >
           <Image
             src="/images/sternenko-banner.png"

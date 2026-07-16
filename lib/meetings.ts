@@ -11,6 +11,7 @@ export type Meeting = {
   location: string;
   description: string;
   link?: string;
+  mapUrl?: string;
 };
 
 export function getSortedMeetings(): Meeting[] {
@@ -30,6 +31,7 @@ export function getSortedMeetings(): Meeting[] {
         description:
           (matterResult.data.description as string) || matterResult.content.trim(),
         link: matterResult.data.link as string | undefined,
+        mapUrl: matterResult.data.mapUrl as string | undefined,
       };
     });
   return allMeetings.sort((a, b) => (a.date < b.date ? 1 : -1));

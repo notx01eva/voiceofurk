@@ -13,16 +13,17 @@ export default function MeetingCard({ meeting }: { meeting: Meeting }) {
       <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
         {meeting.description}
       </p>
-      {meeting.link && (
-        <a
-          href={meeting.link}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-4 inline-flex rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
-        >
-          Деталі / записатись
-        </a>
-      )}
+      <a
+        href={
+          meeting.mapUrl ||
+          `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meeting.location)}`
+        }
+        target="_blank"
+        rel="noreferrer"
+        className="mt-4 inline-flex rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
+      >
+        Локація
+      </a>
     </div>
   );
 }
