@@ -7,7 +7,7 @@ export default function MeetingsMarquee({ meetings }: { meetings: Meeting[] }) {
   const duplicated = [...meetings, ...meetings];
 
   return (
-    <div className="relative max-w-full overflow-hidden">
+    <div className="marquee-wrapper">
       <div className="marquee-track flex w-max gap-4">
         {duplicated.map((meeting, idx) => (
           <div

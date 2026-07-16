@@ -25,13 +25,25 @@ body {
   color: var(--foreground);
 }
 
-html,
 body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#__next {
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.marquee-wrapper {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  contain: paint;
 }
 
 @keyframes marquee {
