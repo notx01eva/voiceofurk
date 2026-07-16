@@ -5,13 +5,13 @@ import { getSortedMeetings } from '@/lib/meetings';
 import { getDonations } from '@/lib/donations';
 import PostCard from '@/components/PostCard';
 import EventCard from '@/components/EventCard';
-import MeetingCard from '@/components/MeetingCard';
+import MeetingsMarquee from '@/components/MeetingsMarquee';
 import DonationCard from '@/components/DonationCard';
 
 export default function Home() {
   const posts = getSortedPosts().slice(0, 3);
   const events = getSortedEvents().slice(0, 2);
-  const meetings = getSortedMeetings().slice(0, 2);
+  const meetings = getSortedMeetings();
   const donations = getDonations();
 
   return (
@@ -57,11 +57,7 @@ export default function Home() {
             Всі мітинги →
           </Link>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          {meetings.map((meeting) => (
-            <MeetingCard key={meeting.slug} meeting={meeting} />
-          ))}
-        </div>
+        <MeetingsMarquee meetings={meetings} />
       </section>
 
       <section className="mt-16">
