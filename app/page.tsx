@@ -18,28 +18,31 @@ export default function Home() {
           href="https://www.sternenkofund.org/"
           target="_blank"
           rel="noreferrer"
-          className="group relative block min-h-[360px] overflow-hidden shadow-xl sm:min-h-[480px]"
+          className="group relative block min-h-[420px] overflow-hidden shadow-xl sm:min-h-[480px]"
         >
-          <picture>
-            <source
-              media="(max-width: 640px)"
-              srcSet="/images/sternenko-banner-mobile.jpeg"
-            />
-            <img
-              src="/images/sternenko-banner-desktop.jpeg"
-              alt="Благодійний фонд Спільнота Стерненка"
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
-            />
-          </picture>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/sternenko-banner-mobile.jpeg"
+            alt="Благодійний фонд Спільнота Стерненка"
+            className="absolute inset-0 block h-full w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:hidden"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/sternenko-banner-desktop.jpeg"
+            alt="Благодійний фонд Спільнота Стерненка"
+            className="absolute inset-0 hidden h-full w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:block"
+          />
           <div className="absolute inset-0 bg-black/70" />
-          <div className="relative flex min-h-[360px] flex-col items-center justify-center p-6 text-center sm:min-h-[480px] sm:p-10">
-            <h2 className="text-2xl font-bold uppercase tracking-wide text-white sm:text-5xl">
-              Фонд Сергія Стерненка
-            </h2>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-zinc-200 sm:max-w-2xl sm:text-lg">
-              Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
-              щодня, щомісяця.
-            </p>
+          <div className="relative flex min-h-[420px] flex-col items-center justify-center p-6 text-center sm:min-h-[480px] sm:p-10">
+            <div className="w-full max-w-lg px-2 sm:max-w-2xl">
+              <h2 className="text-2xl font-bold uppercase tracking-wide text-white sm:text-5xl">
+                Фонд Сергія Стерненка
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-zinc-200 sm:text-lg">
+                Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
+                щодня, щомісяця.
+              </p>
+            </div>
             <span className="mt-8 inline-flex rounded-full bg-amber-500 px-8 py-3.5 text-base font-bold uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 sm:text-lg">
               Донат на поточний русоріз
             </span>
