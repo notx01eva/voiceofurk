@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: 'Голос громади | Громадська ініціатива',
   description:
     'Новини, збори та координація громадської ініціативи. Долучайтесь до небайдужих.',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
