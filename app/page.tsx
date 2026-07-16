@@ -17,12 +17,12 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <section className="rounded-3xl bg-zinc-900 p-4 text-white dark:bg-zinc-100 dark:text-zinc-900 sm:p-6">
+      <section className="overflow-hidden rounded-3xl bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900">
         <a
           href="https://www.sternenkofund.org/"
           target="_blank"
           rel="noreferrer"
-          className="group relative block min-h-[420px] overflow-hidden rounded-2xl shadow-xl sm:min-h-[480px]"
+          className="group relative block min-h-[420px] overflow-hidden shadow-xl sm:min-h-[480px]"
         >
           <Image
             src="/images/sternenko-banner.png"
