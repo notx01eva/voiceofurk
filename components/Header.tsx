@@ -8,7 +8,6 @@ const links = [
   { href: '/events', label: 'Збори' },
   { href: '/meetings', label: 'Мітинги' },
   { href: '/map', label: 'Карта' },
-  { href: '/donate', label: 'Підтримати' },
   { href: '/join', label: 'Приєднатись' },
 ];
 
@@ -18,9 +17,9 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-center px-4 md:justify-between">
         <Link
           href="/"
-          className="break-words text-center text-xl font-bold uppercase tracking-tight md:text-2xl"
+          className="break-words text-center text-xl font-black uppercase tracking-tight md:text-2xl"
         >
-          Голос громади
+          ГОЛОС ГРОМАДИ
         </Link>
 
         <nav className="hidden gap-6 md:flex">

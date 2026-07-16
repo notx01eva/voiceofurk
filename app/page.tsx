@@ -43,8 +43,8 @@ export default function Home() {
                 щодня, щомісяця.
               </p>
             </div>
-            <span className="mt-8 inline-flex max-w-full rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 md:px-8 md:py-3.5 md:text-base md:text-lg">
-              Донат на поточний русоріз
+            <span className="mt-8 inline-flex max-w-full break-words rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-black uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 md:px-8 md:py-3.5 md:text-base md:text-lg">
+              ДОНАТ НА ПОТОЧНИЙ РУСОРІЗ
             </span>
           </div>
         </a>
