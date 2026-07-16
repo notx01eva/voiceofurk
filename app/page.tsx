@@ -18,32 +18,32 @@ export default function Home() {
           href="https://www.sternenkofund.org/"
           target="_blank"
           rel="noreferrer"
-          className="group relative block min-h-[420px] overflow-hidden shadow-xl sm:min-h-[480px]"
+          className="group relative block min-h-[420px] overflow-hidden shadow-xl md:min-h-[480px]"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/sternenko-banner-mobile.jpeg"
             alt="Благодійний фонд Спільнота Стерненка"
-            className="absolute inset-0 block h-full w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:hidden"
+            className="absolute inset-0 block h-full w-full object-cover object-center transition duration-500 group-hover:scale-105 md:hidden"
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/sternenko-banner-desktop.jpeg"
             alt="Благодійний фонд Спільнота Стерненка"
-            className="absolute inset-0 hidden h-full w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:block"
+            className="absolute inset-0 hidden h-full w-full object-cover object-center transition duration-500 group-hover:scale-105 md:block"
           />
           <div className="absolute inset-0 bg-black/70" />
-          <div className="relative flex min-h-[420px] flex-col items-center justify-center p-6 text-center sm:min-h-[480px] sm:p-10">
-            <div className="w-full max-w-lg px-2 sm:max-w-2xl">
-              <h2 className="break-words text-2xl font-bold uppercase tracking-normal text-white sm:text-5xl sm:tracking-wide">
+          <div className="relative flex min-h-[420px] flex-col items-center justify-center p-6 text-center md:min-h-[480px] md:p-10">
+            <div className="w-full max-w-lg px-2 md:max-w-2xl">
+              <h2 className="break-words text-2xl font-bold uppercase tracking-normal text-white md:text-5xl md:tracking-wide">
                 Фонд Сергія Стерненка
               </h2>
-              <p className="mt-4 break-words text-base leading-relaxed text-zinc-200 sm:text-lg">
+              <p className="mt-4 break-words text-base leading-relaxed text-zinc-200 md:text-lg">
                 Забезпечує Сили оборони України FPV-дронами. Прозора звітність:
                 щодня, щомісяця.
               </p>
             </div>
-            <span className="mt-8 inline-flex max-w-full rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 sm:px-8 sm:py-3.5 sm:text-base sm:text-lg">
+            <span className="mt-8 inline-flex max-w-full rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-zinc-900 transition hover:bg-amber-400 md:px-8 md:py-3.5 md:text-base md:text-lg">
               Донат на поточний русоріз
             </span>
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
             Всі новини →
           </Link>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}

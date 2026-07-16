@@ -12,7 +12,7 @@ export default function MeetingsMarquee({ meetings }: { meetings: Meeting[] }) {
         {duplicated.map((meeting, idx) => (
           <div
             key={`${meeting.slug}-${idx}`}
-            className="w-[min(300px,calc(100vw-4rem))] shrink-0 sm:w-[340px]"
+            className="w-[min(300px,calc(100vw-4rem))] shrink-0 md:w-[340px]"
           >
             <MeetingCard meeting={meeting} />
           </div>
